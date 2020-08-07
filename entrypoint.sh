@@ -4,9 +4,9 @@ set -x
 REPOSITORY_NAME=$1
 REPOSITORY_BRANCH=$2
 
-git clone --branch $REPOSITORY_BRANCH https://github.com/$REPOSITORY_NAME.git /project-tests
-rm -rf /project-tests/.git
-cp -r /project-tests/* .
+# git clone --branch $REPOSITORY_BRANCH https://github.com/$REPOSITORY_NAME.git /project-tests
+# rm -rf /project-tests/.git
+# cp -r /project-tests/* .
 npm install
 npm test -- --json --outputFile=evaluation.json
 node /evaluator.js evaluation.json .trybe/requirements.json result.json
