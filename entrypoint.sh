@@ -5,7 +5,7 @@ run_npm_start=$1
 wait_for_url=$2
 
 echo "Debug passo 1"
-ls -lah
+ls -lah ./.github/actions/jest-evaluator
 
 npm install
 
